@@ -1,0 +1,101 @@
+.bannerContainer{
+    background-color: #FFB30E;
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left:0px;
+    width: 1920px;
+    height: 620px;
+}
+.bannerImage{
+    position: relative;
+    left: 45%;
+    top: 16%;
+
+}
+.bannerTitle{
+    color: white;
+    font-weight: bold;
+    font-size: 4.5em;
+    margin-bottom: auto;
+}
+.bannerOrderCard{
+    position: absolute;
+    top:5%;    
+    left: 2%;
+    width: 856px;
+    height: 355px;
+}
+.bannerText{
+    font-size:1.25em; 
+    margin-bottom: 20px;
+}
+.bannerOrderCardBody{
+    border-radius: 10px;
+    background-color: white;
+    width: 856px;
+    height: 172px;
+    margin-top:20px;
+}
+.bannerButton{
+    margin: 20px 5px 0px 12px; 
+    color: #F17228;
+    background-color: color-mix(in srgb, #F17228 10%, white);
+    border-radius: 10px;
+    border: none;
+    width: 148px;
+    height: 38px;
+}
+.bannerButton2{
+    color: #757575;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 45px;
+    width: 148px;
+    height: 38px;
+
+
+}
+.bannerButtonContainer{
+   
+    width: 100%;
+    height: 60px;
+  
+}
+.bannerButtonInput{
+    border-radius: 10px ;
+    border: none;
+    background-color: #F5F5F5;
+    margin-left:11px;
+    margin-right: 5px;
+}
+.bannerButtonInputText{
+    border-radius: 10px ;
+    border: none;
+    color: #9E9E9E;
+    background-color: #F5F5F5;
+    width: 593px;
+    height: 49px;
+    margin-left: 13px;
+   
+}
+
+.bannerButtonSearch{
+    border: none;
+    border-radius: 10px ;
+    color: white;
+    background-color: #FF7A7A;
+    width: 199px;
+    height: 60px;
+
+}
+.bannerButtonIcon{
+    position: relative;
+    top:4px;
+    right: 8px;
+}
+.bannerButtonInputIcon{
+    position: relative;
+    left: 1%;
+    top: 11px;
+}

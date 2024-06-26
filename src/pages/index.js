@@ -6,7 +6,12 @@ import Banner from "@/components/Banner";
 export default function Home() {
   return (
     <div>
-      <Banner></Banner>
+      <Banner
+        title="Are you starving ?"
+        text="Within a few clics, find  meals that are accessible near you"
+        button="Delivery"
+        button2="Pick up"
+      />
     </div>
   );
 }
