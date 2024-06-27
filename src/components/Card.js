@@ -2,14 +2,14 @@ import styles from "../styles/Card.module.css";
 
 function Card(props) {
   return (
-    <div className={styles.cardContainer}>
+    <div>
       <img className={styles.imageCard} src={props.image} />
-      <h2 className={styles.titleCard}>{props.title}</h2>
+      <h2>{props.title}</h2>
       <div>
-        <p className={styles.addressCard}>{props.address}</p>
+        <p>{props.address}</p>
       </div>
       <div>
-        <p className={styles.priceCard}>{props.price}</p>
+        <p>{props.price}</p>
       </div>
     </div>
   );

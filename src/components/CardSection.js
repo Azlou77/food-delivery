@@ -4,7 +4,7 @@ import Card from "./Card";
 function CardSection(props) {
   return (
     <section className={styles.sectionContainer}>
-      {/* Loop through the sectionData arra*/}
+      {/* Loop through the sectionData array*/}
       {props.sectionData.map((card) => {
         {
           /* Render a  Card component for each object*/
