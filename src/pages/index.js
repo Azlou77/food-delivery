@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Banner from "@/components/Banner";
 import CardSection from "@/components/CardSection";
+import Title from "../components/Title";
 
 const sectionData = [
   {
@@ -86,7 +87,7 @@ export default function Home() {
       />
 
       {/* Card Section component */}
-
+      <Title title="Popular items" />
       <CardSection sectionData={sectionData} />
     </div>
   );

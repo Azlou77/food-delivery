@@ -14,8 +14,9 @@ function CardSection(props) {
             key={card.id}
             image={card.image}
             title={card.title}
-            address={card.category}
+            category={card.category}
             price={card.price}
+            button="Order Now"
           />
         );
       })}

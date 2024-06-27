@@ -7,3 +7,18 @@
     width: 283px;
     height: 283px;
 }
+.cardButton{
+    width: 283px;
+    height: 60px;
+    background-color: #F17228;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}   
+.cardCategory{
+    font-size: 17px;
+    color: #FFB30E;
+}
