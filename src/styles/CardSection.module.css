@@ -1,0 +1,6 @@
+.sectionContainer{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 80px;
+}
