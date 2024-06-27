@@ -7,6 +7,7 @@ import Banner from "@/components/Banner";
 import CardSection from "@/components/CardSection";
 import Title from "@/components/Title";
 import ShoppingCart from "@/components/ShoppingCart";
+import FriendList from "@/components/FriendList";
 
 // Data import from https://fakestoreapi.com/products
 [
@@ -79,13 +80,24 @@ import ShoppingCart from "@/components/ShoppingCart";
   },
 ];
 export default function Home() {
+  // States
   const [products, setProducts] = useState([]);
+  const [isDisplayed, setIsDisplayed] = useState(false);
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
       setProducts(res.data);
     });
   }, []);
+
+  // Functions to display button
+  function handleDisplayed() {
+    if (isDisplayed) {
+      console.log("Je suis caché");
+    }
+    setIsDisplayed(!isDisplayed);
+  }
+
   return (
     <div>
       {/* Banner component */}
@@ -102,6 +114,9 @@ export default function Home() {
 
       {/* ShoppingCartItem component */}
       <ShoppingCart sectionData={products} />
+
+      {/* FriendList component */}
+      <FriendList />
     </div>
   );
 }

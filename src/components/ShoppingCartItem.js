@@ -1,6 +1,9 @@
 import styles from "../styles/ShoppingCartItem.module.css";
+import { useEffect, useState } from "react";
 
 function ShoppingCartItem(props) {
+  // Event to display shopping cart
+
   return (
     <div className={styles.cartItemContainer}>
       <div className={styles.cartItemLeft}>
