@@ -1,0 +1,18 @@
+.cartItemContainer{
+    width: 558px;
+    height: 86px;
+}
+.cartItemImage{
+    border-radius: 10px;
+    width: 69px;
+    height: 86px;
+}
+.cartItemCategory{
+    color: #FFB30E;
+    font-size: 1rem;
+
+}
+.cartItemTitle{
+    color: #424242;
+    font-size: 1rem;
+}
