@@ -9,7 +9,7 @@ function Card(props) {
         <p className={styles.cardCategory}>{props.category}</p>
       </div>
       <div>
-        <p>${props.price}</p>
+        <p className={styles.cardPrice}>${props.price}</p>
       </div>
       <button className={styles.cardButton}>{props.button}</button>
     </div>

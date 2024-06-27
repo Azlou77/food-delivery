@@ -20,6 +20,10 @@
     cursor: pointer;
 }   
 .cardCategory{
-    font-size: 17px;
+    font-size: 25px;
     color: #FFB30E;
+}
+.cardPrice{
+    font-size: 20px;
+    color: #424242;
 }
