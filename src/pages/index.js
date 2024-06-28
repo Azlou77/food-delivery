@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Banner from "@/components/Banner";
 import CardSection from "@/components/CardSection";
+import Card from "@/components/Card";
 import Title from "@/components/Title";
 import ShoppingCart from "@/components/ShoppingCart";
+import ShoppingCartItem from "@/components/ShoppingCartItem";
 import FriendList from "@/components/FriendList";
 
 // Data import from https://fakestoreapi.com/products
@@ -107,13 +109,12 @@ export default function Home() {
         button="Delivery"
         button2="Pick up"
       />
+
+      <FriendList />
       <Title title="Popular items" />
 
       {/* Card Section component */}
       <CardSection sectionData={products} />
-
-      {/* ShoppingCartItem component */}
-      <ShoppingCart sectionData={products} />
 
       {/* FriendList component */}
       <FriendList />
