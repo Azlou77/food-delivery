@@ -1,10 +1,7 @@
 import styles from "../styles/Card.module.css";
 import { useEffect, useState } from "react";
-import ShoppingCartItem from "./ShoppingCartItem";
 
 function Card(props) {
-  // Event to display shopping cart
-
   // Regroup properties of the cart item
   const [cartItem, setCartItem] = useState({
     title: props.title,
@@ -48,28 +45,17 @@ function Card(props) {
   return (
     <div className={styles.cardContainer}>
       <img className={styles.cardImage} src={props.image} />
-      <h2>{cartItem.title}</h2>
+      <h2>{props.title}</h2>
       <div>
         <p className={styles.cardCategory}>{props.category}</p>
       </div>
       <div>
         <p className={styles.cardPrice}>${props.price}</p>
       </div>
-      <button onClick={addCartItem} className={styles.cardButton}>
+      <button onClick={() => addCartItem()} className={styles.cardButton}>
         {props.button}
       </button>
-      <ul>
-        {/* Return the list of cart items */}
-        {cartList.map((item, index) => {
-          return (
-            <li key={index}>
-              <h3>{item.title}</h3>
-              <p>${item.price}</p>
-              <button onClick={() => deleteCartItem(index)}>Delete</button>
-            </li>
-          );
-        })}
-      </ul>
+      <div className={styles.cardInput}></div>
     </div>
   );
 }

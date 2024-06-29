@@ -1,4 +1,5 @@
 import styles from "../styles/CardSection.module.css";
+import { useEffect, useState } from "react";
 import Card from "./Card";
 
 function CardSection(props) {

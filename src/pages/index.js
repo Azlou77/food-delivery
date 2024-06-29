@@ -7,10 +7,7 @@ import Banner from "@/components/Banner";
 import CardSection from "@/components/CardSection";
 import Card from "@/components/Card";
 import Title from "@/components/Title";
-import ShoppingCart from "@/components/ShoppingCart";
-import ShoppingCartItem from "@/components/ShoppingCartItem";
-import FriendList from "@/components/FriendList";
-
+import Basket from "@/components/Basket";
 // Data import from https://fakestoreapi.com/products
 [
   {
@@ -84,7 +81,7 @@ import FriendList from "@/components/FriendList";
 export default function Home() {
   // States
   const [products, setProducts] = useState([]);
-  const [isDisplayed, setIsDisplayed] = useState(false);
+  const [basket, setBasket] = useState([]);
 
   useEffect(() => {
     axios.get("https://fakestoreapi.com/products").then((res) => {
@@ -93,11 +90,8 @@ export default function Home() {
   }, []);
 
   // Functions to display button
-  function handleDisplayed() {
-    if (isDisplayed) {
-      console.log("Je suis caché");
-    }
-    setIsDisplayed(!isDisplayed);
+  function handleBasket(product) {
+    setBasket([...basket, product]);
   }
 
   return (
@@ -109,15 +103,12 @@ export default function Home() {
         button="Delivery"
         button2="Pick up"
       />
-
-      <FriendList />
       <Title title="Popular items" />
 
       {/* Card Section component */}
       <CardSection sectionData={products} />
 
-      {/* FriendList component */}
-      <FriendList />
+      <Basket cartList={products} handleBasket={handleBasket} />
     </div>
   );
 }
