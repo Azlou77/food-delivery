@@ -7,17 +7,18 @@ function Basket(props) {
       <h2>Cart</h2>
       <ul>
         {/* Loop through the cartList array */}
-        {props.cartList.map((item, index) => {
-          {
-            /* Render a  Card component for each object */
-          }
-          return (
-            <li key={item.id}>
-              <h3>{item.title}</h3>
-              <p>${item.price}</p>
-            </li>
-          );
-        })}
+        {props.basket.length > 0 ? (
+          props.basket.map((product) => {
+            return (
+              <li key={product.id}>
+                <h3>{product.title}</h3>
+                <p>${product.price}</p>
+              </li>
+            );
+          })
+        ) : (
+          <p>No products</p>
+        )}
       </ul>
     </aside>
   );
