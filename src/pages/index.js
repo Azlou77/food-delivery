@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Banner from "@/components/Banner";
 import CardSection from "@/components/CardSection";
-import Card from "@/components/Card";
 import Title from "@/components/Title";
 import Basket from "@/components/Basket";
 
@@ -26,6 +25,11 @@ export default function Home() {
     setBasket(newBasket);
   }
 
+  function removeProduct(id) {
+    const filteredBasket = basket.filter((p) => p.id !== id);
+    setBasket(filteredBasket);
+  }
+
   return (
     <div>
       <Banner
@@ -35,7 +39,7 @@ export default function Home() {
         button2="Pick up"
       />
       <Title title="Popular items" />
-      <Basket basket={basket} />
+      <Basket basket={basket} removeProduct={removeProduct} />
       <CardSection products={products} handleBasket={handleBasket} />
     </div>
   );

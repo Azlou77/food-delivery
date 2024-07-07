@@ -13,6 +13,12 @@ function Basket(props) {
             <li key={product.id}>
               <h3>{product.title}</h3>
               <p>${product.price}</p>
+              <button
+                className={styles.removeButton}
+                onClick={() => props.removeProduct(product.id)}
+              >
+                X
+              </button>
             </li>
           );
         })}
