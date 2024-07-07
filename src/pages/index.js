@@ -19,15 +19,32 @@ export default function Home() {
     });
   }, []);
 
+  const addOneToBasket = (id) => {
+    return basket.map((p) =>
+      p.id === id ? { ...p, amount: p.amount + 1 } : p
+    );
+  };
+
   function handleBasket(product) {
+    const find = basket.find((p) => p.id === product.id);
     let newBasket;
-    newBasket = [...basket, product];
+    if (find) {
+      newBasket = addOneToBasket(product.id);
+    } else {
+      newBasket = [...basket, { ...product, amount: 1 }];
+    }
+
     setBasket(newBasket);
   }
 
   function removeProduct(id) {
     const filteredBasket = basket.filter((p) => p.id !== id);
     setBasket(filteredBasket);
+  }
+
+  function incrementAmount(id) {
+    const newBasket = addOneToBasket(id);
+    setBasket(newBasket);
   }
 
   return (
@@ -39,7 +56,11 @@ export default function Home() {
         button2="Pick up"
       />
       <Title title="Popular items" />
-      <Basket basket={basket} removeProduct={removeProduct} />
+      <Basket
+        basket={basket}
+        removeProduct={removeProduct}
+        incrementAmount={incrementAmount}
+      />
       <CardSection products={products} handleBasket={handleBasket} />
     </div>
   );
