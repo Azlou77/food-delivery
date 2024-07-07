@@ -1,0 +1,19 @@
+.basket {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 6px -7px rgba(0,0,0,0.45);
+    position: sticky;
+    top: 0px;
+    right: 50px;
+    width: 600px;
+    border: 1px solid black;
+    padding: 25px;
+}
+
+.removeButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: red;
+    color: white
+}

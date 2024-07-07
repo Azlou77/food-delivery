@@ -21,12 +21,8 @@ export default function Home() {
   }, []);
 
   function handleBasket(product) {
-    const find = basket.find((p) => p.id === product.id);
     let newBasket;
-
-    if (find) {
-      newBasket = addOneToBasket(product.id);
-    }
+    newBasket = [...basket, product];
     setBasket(newBasket);
   }
 

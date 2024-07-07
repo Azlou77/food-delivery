@@ -16,7 +16,9 @@ function Card(props) {
       <button
         className={styles.cardButton}
         onClick={() => props.handleBasket(props.product)}
-      ></button>
+      >
+        Add to basket
+      </button>
       <div className={styles.cardInput}></div>
     </div>
   );
