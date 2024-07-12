@@ -49,6 +49,7 @@ export default function Home() {
 
   return (
     <div>
+      <Title title="Welcome to our store" />
       <Banner
         title="Are you starving ?"
         text="Within a few clics, find  meals that are accessible near you"
