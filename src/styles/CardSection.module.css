@@ -1,7 +1,7 @@
 .sectionContainer{
     display: flex;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    margin-top: 34em;
 }

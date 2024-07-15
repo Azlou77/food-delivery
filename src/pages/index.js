@@ -19,32 +19,15 @@ export default function Home() {
     });
   }, []);
 
-  const addOneToBasket = (id) => {
-    return basket.map((p) =>
-      p.id === id ? { ...p, amount: p.amount + 1 } : p
-    );
-  };
-
   function handleBasket(product) {
-    const find = basket.find((p) => p.id === product.id);
     let newBasket;
-    if (find) {
-      newBasket = addOneToBasket(product.id);
-    } else {
-      newBasket = [...basket, { ...product, amount: 1 }];
-    }
-
+    newBasket = [...basket, product];
     setBasket(newBasket);
   }
 
   function removeProduct(id) {
     const filteredBasket = basket.filter((p) => p.id !== id);
     setBasket(filteredBasket);
-  }
-
-  function incrementAmount(id) {
-    const newBasket = addOneToBasket(id);
-    setBasket(newBasket);
   }
 
   return (
@@ -61,7 +44,7 @@ export default function Home() {
       <Basket
         basket={basket}
         removeProduct={removeProduct}
-        incrementAmount={incrementAmount}
+        incrementQuantity={() => incrementQuantity(quantity)}
       />
 
       <CardSection products={products} handleBasket={handleBasket} />

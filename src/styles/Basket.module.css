@@ -17,3 +17,16 @@
     background: red;
     color: white
 }
+.buttonQuantity button{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #F17228;
+    color: white
+}
+.buttonQuantity input{
+    width: 6%;
+}
+.productTitle{
+    margin-right: 20px;
+}
