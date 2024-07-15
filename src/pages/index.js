@@ -14,7 +14,7 @@ export default function Home() {
   const [basket, setBasket] = useState([]);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
+    axios.get(process.env.NEXT_PUBLIC_API_URL).then((res) => {
       setProducts(res.data);
     });
   }, []);
@@ -49,19 +49,21 @@ export default function Home() {
 
   return (
     <div>
-      <Title title="Welcome to our store" />
-      <Banner
-        title="Are you starving ?"
-        text="Within a few clics, find  meals that are accessible near you"
-        button="Delivery"
-        button2="Pick up"
-      />
-      <Title title="Popular items" />
+      <header>
+        <Banner
+          title="Are you starving ?"
+          text="Within a few clics, find  meals that are accessible near you"
+          button="Delivery"
+          button2="Pick up"
+        />
+      </header>
+
       <Basket
         basket={basket}
         removeProduct={removeProduct}
         incrementAmount={incrementAmount}
       />
+
       <CardSection products={products} handleBasket={handleBasket} />
     </div>
   );
