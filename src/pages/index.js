@@ -54,6 +54,11 @@ export default function Home() {
     setBasket(updatedBasket);
   };
 
+  function removeFromBasket(id) {
+    const updatedBasket = basket.filter((p) => p.id !== id);
+    setBasket(updatedBasket);
+  }
+
   return (
     <div>
       <Head>
@@ -91,6 +96,7 @@ export default function Home() {
         basket={basket}
         incrementQuantity={incrementQuantity}
         reduceQuantity={reduceQuantity}
+        removeFromBasket={removeFromBasket}
       />
 
       <CardSection products={products} handleBasket={handleBasket} />

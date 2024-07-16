@@ -1,21 +1,21 @@
 import styles from "../styles/Card.module.css";
 
-function Card(props) {
+function Card({ image, title, category, price, handleBasket, product }) {
   // Regroup properties of the cart item
 
   return (
     <div className={styles.cardContainer}>
-      <img className={styles.cardImage} src={props.product.image} />
-      <h2>{props.title}</h2>
+      <img className={styles.cardImage} src={product.image} />
+      <h2>{title}</h2>
       <div>
-        <p className={styles.cardCategory}>{props.product.category}</p>
+        <p className={styles.cardCategory}>{product.category}</p>
       </div>
       <div>
-        <p className={styles.cardPrice}>${props.product.price}</p>
+        <p className={styles.cardPrice}>${product.price}</p>
       </div>
       <button
         className={styles.cardButton}
-        onClick={() => props.handleBasket(props.product)}
+        onClick={() => handleBasket(product)}
       >
         Add to basket
       </button>
