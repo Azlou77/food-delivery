@@ -3,16 +3,6 @@ import styles from "@/styles/Basket.module.css";
 
 // Create a Basket component for products list
 function Basket(props) {
-  const [quantity, setQuantity] = useState(0);
-
-  function incrementQuantity() {
-    setQuantity((prevQuantity) => prevQuantity + 1);
-  }
-
-  function reduceQuantity() {
-    setQuantity((prevQuantity) => prevQuantity - 1);
-  }
-
   return (
     <aside className={styles.basket}>
       <h2>Cart</h2>
@@ -22,15 +12,15 @@ function Basket(props) {
           return (
             <div className={styles.buttonQuantity}>
               <span className={styles.productTitle}>
-                {product.title} {product.price}$
+                {product.title} {product.price}
               </span>
-
-              <button onClick={reduceQuantity}>-</button>
-              <input
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-              />
-              <button onClick={incrementQuantity}>+</button>
+              <button onClick={() => props.reduceQuantity(product.id)}>
+                -
+              </button>
+              x{product.quantity}
+              <button onClick={() => props.incrementQuantity(product.id)}>
+                +
+              </button>
             </div>
           );
         })
