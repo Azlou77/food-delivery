@@ -3,12 +3,6 @@ import styles from "../styles/Banner.module.css";
 function Banner(props) {
   return (
     <div className={styles.bannerContainer}>
-      <img
-        className={styles.bannerImage}
-        src="/bowl-food.png"
-        alt="bowl food"
-      />
-
       <div className={styles.bannerOrderCard}>
         <h2 className={styles.bannerTitle}>{props.title}</h2>
         <small className={styles.bannerText}>{props.text}</small>
